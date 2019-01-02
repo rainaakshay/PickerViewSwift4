@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Picker_View" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="______" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pwe-4X-Tba">
+                                <rect key="frame" x="20" y="94" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AEA-4M-PKQ">
+                                <rect key="frame" x="0.0" y="161" width="453" height="171"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="AEA-4M-PKQ" secondAttribute="height" multiplier="46:19" id="oFB-5I-LsL"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Ppn-pV-IU6"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Iwh-7y-k5v"/>
+                                </connections>
+                            </pickerView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="xyI-29-8Z1">
+                                <rect key="frame" x="0.0" y="568" width="453" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xyI-29-8Z1" secondAttribute="height" multiplier="23:12" id="Ubd-WU-Kiy"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="566455096.387128">
+                                    <!--2018-12-14 04:38:16 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="timechanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="jZF-kl-fJA"/>
+                                </connections>
+                            </datePicker>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Gjz-7L-9jD">
+                                <rect key="frame" x="0.0" y="342" width="453" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Gjz-7L-9jD" secondAttribute="height" multiplier="23:12" id="6m0-lK-srs"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="566455096.387128">
+                                    <!--2018-12-14 04:38:16 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="datechanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="OXJ-US-id9"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="______" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1mz-X7-Ajj">
+                                <rect key="frame" x="20" y="125" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TESTING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fb4-Wt-JyT">
+                                <rect key="frame" x="0.0" y="54" width="414" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fb4-Wt-JyT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="1Uz-oe-zwj"/>
+                            <constraint firstItem="xyI-29-8Z1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="1oJ-8d-8JM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pwe-4X-Tba" secondAttribute="trailing" constant="20" id="AZe-qw-t9k"/>
+                            <constraint firstItem="fb4-Wt-JyT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ELQ-9v-XWx"/>
+                            <constraint firstItem="Gjz-7L-9jD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FiZ-fh-SrR"/>
+                            <constraint firstItem="AEA-4M-PKQ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ILD-sJ-kNq"/>
+                            <constraint firstItem="1mz-X7-Ajj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="WWp-IU-aqu"/>
+                            <constraint firstItem="pwe-4X-Tba" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Xlg-q0-i84"/>
+                            <constraint firstItem="fb4-Wt-JyT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Xx3-o5-fCA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1mz-X7-Ajj" secondAttribute="trailing" constant="20" id="ZXY-yk-Ou3"/>
+                            <constraint firstItem="pwe-4X-Tba" firstAttribute="top" secondItem="fb4-Wt-JyT" secondAttribute="bottom" constant="10" id="Zba-Vj-zXx"/>
+                            <constraint firstItem="xyI-29-8Z1" firstAttribute="top" secondItem="Gjz-7L-9jD" secondAttribute="bottom" constant="10" id="jCH-7P-DB7"/>
+                            <constraint firstItem="xyI-29-8Z1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oDf-Y1-X3G"/>
+                            <constraint firstItem="fb4-Wt-JyT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oKu-Dd-fJT"/>
+                            <constraint firstItem="1mz-X7-Ajj" firstAttribute="top" secondItem="pwe-4X-Tba" secondAttribute="bottom" constant="10" id="qmG-UI-Qba"/>
+                            <constraint firstItem="AEA-4M-PKQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rU5-I3-VRe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xyI-29-8Z1" secondAttribute="bottom" constant="78" id="svI-dh-iTz"/>
+                            <constraint firstItem="Gjz-7L-9jD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tvx-hz-zUr"/>
+                            <constraint firstItem="xyI-29-8Z1" firstAttribute="top" secondItem="Gjz-7L-9jD" secondAttribute="bottom" constant="10" id="vcV-4n-TDj"/>
+                            <constraint firstItem="Gjz-7L-9jD" firstAttribute="top" secondItem="AEA-4M-PKQ" secondAttribute="bottom" constant="10" id="y70-Iy-uvn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="Colors" destination="AEA-4M-PKQ" id="R13-90-cWa"/>
+                        <outlet property="Datelbl" destination="1mz-X7-Ajj" id="MCV-5c-7BF"/>
+                        <outlet property="Timelbl" destination="pwe-4X-Tba" id="yVm-gY-FHY"/>
+                        <outlet property="date" destination="Gjz-7L-9jD" id="QQZ-28-sf4"/>
+                        <outlet property="time" destination="xyI-29-8Z1" id="dEC-fW-d1D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.23188405797103" y="133.25892857142856"/>
+        </scene>
+    </scenes>
+</document>
